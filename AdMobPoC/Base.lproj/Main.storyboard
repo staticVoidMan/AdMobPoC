@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="HomeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Jz-d5-cqt">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="2SR-zB-QDJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="u6t-Bp-9zl"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="4e9-g3-SJ6" kind="embed" identifier="embedBanner_AdMobVC" id="3pQ-Zi-YnQ"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFt-aW-j70">
+                                <rect key="frame" x="16" y="252" width="568" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9uo-pR-cFy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="shN-fN-wSM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Toggle Banner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnToggleBanner_Act:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M8X-1D-LD6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMO-h8-jYY">
+                                <rect key="frame" x="16" y="304" width="568" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="TYn-pD-8p8"/>
+                                    <constraint firstAttribute="height" constant="44" id="Uog-8i-yqu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Request Interstitial">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRequestInterstitial_Act:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="buk-BQ-hhd"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1FD-u5-36e">
+                                <rect key="frame" x="552" y="316" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="GYx-O9-wAN"/>
+                                    <constraint firstAttribute="height" constant="20" id="JHg-2Z-pA7"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="qtf-Jd-NQY">
+                                <rect key="frame" x="552" y="264" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="W01-Sm-FDC"/>
+                                    <constraint firstAttribute="width" constant="20" id="iaR-UL-OOT"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qtf-Jd-NQY" firstAttribute="centerY" secondItem="pFt-aW-j70" secondAttribute="centerY" id="1ju-7v-bdU"/>
+                            <constraint firstItem="nMO-h8-jYY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="5xL-J1-Hwv"/>
+                            <constraint firstItem="qtf-Jd-NQY" firstAttribute="trailing" secondItem="pFt-aW-j70" secondAttribute="trailing" constant="-12" id="CYD-Ik-JfL"/>
+                            <constraint firstItem="pFt-aW-j70" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="GZD-4a-M0d"/>
+                            <constraint firstAttribute="centerY" secondItem="nMO-h8-jYY" secondAttribute="centerY" constant="-26" id="INs-Uw-kVR"/>
+                            <constraint firstItem="4Jz-d5-cqt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Lmk-xe-czd"/>
+                            <constraint firstAttribute="centerY" secondItem="pFt-aW-j70" secondAttribute="centerY" constant="26" id="ZIv-C6-C56"/>
+                            <constraint firstAttribute="trailing" secondItem="pFt-aW-j70" secondAttribute="trailing" constant="16" id="nLj-13-Upc"/>
+                            <constraint firstAttribute="trailing" secondItem="nMO-h8-jYY" secondAttribute="trailing" constant="16" id="ozc-Qi-IiC"/>
+                            <constraint firstItem="1FD-u5-36e" firstAttribute="centerY" secondItem="nMO-h8-jYY" secondAttribute="centerY" id="rU5-Rx-V60"/>
+                            <constraint firstItem="1FD-u5-36e" firstAttribute="trailing" secondItem="nMO-h8-jYY" secondAttribute="trailing" constant="-12" id="syq-Ig-STZ"/>
+                            <constraint firstAttribute="trailing" secondItem="4Jz-d5-cqt" secondAttribute="trailing" id="tWI-TE-1BB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4Jz-d5-cqt" secondAttribute="bottom" id="xA7-ig-hKO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityAdMobBanner" destination="qtf-Jd-NQY" id="joX-El-RDt"/>
+                        <outlet property="activityAdMobInterstitial" destination="1FD-u5-36e" id="hgu-li-Zs2"/>
+                        <outlet property="btnRequestInterstitial" destination="nMO-h8-jYY" id="x6K-Ee-3a4"/>
+                        <outlet property="btnToggleBanner" destination="pFt-aW-j70" id="nZl-8q-K4G"/>
+                        <outlet property="constraintBanner" destination="xA7-ig-hKO" id="ZuA-9C-LxP"/>
+                        <outlet property="vwContainerBanner" destination="4Jz-d5-cqt" id="Jg3-QG-zr8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Banner Ad MobVC-->
+        <scene sceneID="Ql6-0v-GLj">
+            <objects>
+                <viewController storyboardIdentifier="Banner_AdMobVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4e9-g3-SJ6" customClass="Banner_AdMobVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k6w-OH-WsM"/>
+                        <viewControllerLayoutGuide type="bottom" id="UDj-fq-PTQ"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yh0-9Y-d1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oda-6r-nF5" customClass="GADBannerView">
+                                <rect key="frame" x="140" y="0.0" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BoO-1D-vQS"/>
+                                    <constraint firstAttribute="width" constant="320" id="Hsm-N2-kE4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Oda-6r-nF5" secondAttribute="centerY" id="1d4-bZ-Pbg"/>
+                            <constraint firstAttribute="centerX" secondItem="Oda-6r-nF5" secondAttribute="centerX" id="ccU-Vl-VZh"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="adMob" destination="Oda-6r-nF5" id="PUs-5N-RlP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSq-Qw-tMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="687"/>
+        </scene>
+    </scenes>
+</document>
