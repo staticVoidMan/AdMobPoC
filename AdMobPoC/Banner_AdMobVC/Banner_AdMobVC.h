@@ -10,7 +10,7 @@
 
 @protocol Banner_AdMobVCDelegate <NSObject>
 @required
--(void)requestAdMobBannerCompletedWithSuccess:(BOOL)show;
+-(void)requestAdMobBannerCompletedWithSuccess:(BOOL)success;
 @end
 
 @interface Banner_AdMobVC : UIViewController

@@ -78,8 +78,10 @@
 }
 
 #pragma mark - Banner_AdMobVC Delegates
--(void)requestAdMobBannerCompletedWithSuccess:(BOOL)show {
-    [self btnToggleBanner_Act:btnToggleBanner];
+-(void)requestAdMobBannerCompletedWithSuccess:(BOOL)success {
+    if (success && !btnToggleBanner.selected) {
+        [self btnToggleBanner_Act:btnToggleBanner];
+    }
 }
 
 #pragma mark - Interstitial_AdMobVC
